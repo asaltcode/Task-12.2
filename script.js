@@ -31,4 +31,4 @@ respons
     }
     //Select all text boxes
     document.querySelectorAll(".text-box").forEach(pointerScroll);
-  });
+  }).catch((err) => alert("Emojis not exist Reload the webpage"))
