@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+body {
+  background-color: #eeeeee;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body::-webkit-scrollbar {
+  /* vertical scrollbar size reduce */
+  width: 0;
+}
+header {
+  color: white;
+  background-image: repeating-linear-gradient(
+      59deg,
+      hsla(323, 0%, 57%, 0.12) 0px,
+      transparent 7px,
+      hsla(323, 0%, 57%, 0.12) 10px,
+      transparent 17px,
+      hsla(323, 0%, 57%, 0.12) 20px,
+      transparent 27px,
+      hsla(323, 0%, 57%, 0.12) 30px
+    ),
+    repeating-linear-gradient(
+      12deg,
+      hsla(323, 0%, 57%, 0.12) 0px,
+      transparent 7px,
+      hsla(323, 0%, 57%, 0.12) 10px,
+      transparent 17px,
+      hsla(323, 0%, 57%, 0.12) 20px,
+      transparent 27px,
+      hsla(323, 0%, 57%, 0.12) 30px
+    ),
+    repeating-linear-gradient(
+      133deg,
+      hsla(323, 0%, 57%, 0.12) 0px,
+      transparent 7px,
+      hsla(323, 0%, 57%, 0.12) 10px,
+      transparent 17px,
+      hsla(323, 0%, 57%, 0.12) 20px,
+      transparent 27px,
+      hsla(323, 0%, 57%, 0.12) 30px
+    ),
+    linear-gradient(90deg, rgb(37, 37, 37), rgb(37, 37, 37));
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  text-shadow: 2px 2px 50px #99ff00, 3px 3px 50px #99ff00;
+}
+.container {
+  margin-top: 80px;
+  padding: 15px;
+  max-width: 1200px;
+  width: 100%;
+}
+.emojis {
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 10px;
+}
+.emoji-box {
+  box-shadow: 1px 1px 10px rgb(191, 191, 191);
+  background-color: #ecf0f3;
+  border-radius: 20px;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.emoji-pic {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 20px 20px 0 0;
+  background-image: repeating-linear-gradient(
+      /* Background image*/ 293deg,
+      hsla(29, 0%, 74%, 0.12) 0px,
+      transparent 7px,
+      hsla(29, 0%, 74%, 0.12) 12px,
+      transparent 19px,
+      hsla(29, 0%, 74%, 0.12) 24px,
+      transparent 31px,
+      hsla(29, 0%, 74%, 0.12) 36px
+    ),
+    repeating-linear-gradient(
+      43deg,
+      hsla(29, 0%, 74%, 0.12) 0px,
+      transparent 7px,
+      hsla(29, 0%, 74%, 0.12) 12px,
+      transparent 19px,
+      hsla(29, 0%, 74%, 0.12) 24px,
+      transparent 31px,
+      hsla(29, 0%, 74%, 0.12) 36px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(29, 0%, 74%, 0.12) 0px,
+      transparent 7px,
+      hsla(29, 0%, 74%, 0.12) 12px,
+      transparent 19px,
+      hsla(29, 0%, 74%, 0.12) 24px,
+      transparent 31px,
+      hsla(29, 0%, 74%, 0.12) 36px
+    ),
+    linear-gradient(90deg, rgb(253, 253, 253), rgb(253, 253, 253));
+  font-size: 150px;
+  box-shadow: inset -5px -5px 10px #ffffff,
+    inset 5px 5px 10px rgba(0, 0, 0, 0.16);
+  transition: 0.8s;
+}
+
+.emoji-pic:hover {
+  transform: translateY(-5px);
+  box-shadow: inset 5px 5px 10px #ffffff,
+    inset -5px -5px 10px rgba(0, 0, 0, 0.16), -5px -5px 10px rgba(0, 0, 0, 0.16),
+    5px 5px 10px #ffffff;
+}
+
+.emoji {
+  cursor: pointer;
+  transition: 0.8s;
+}
+.emoji:hover {
+  filter: drop-shadow(3px 3px 10px rgb(129, 129, 129));
+  transform: scale(0.9);
+}
+.text-box {
+  cursor: pointer;
+  text-wrap: nowrap;
+  overflow-x: auto;
+  box-shadow: inset -5px -5px 10px #ffffff,
+    inset 5px 5px 10px rgba(0, 0, 0, 0.16);
+  width: initial;
+  padding: 10px;
+  border-radius: 0 0 20px 20px;
+  user-select: none; /*cannot select text */
+}
+.text-box::-webkit-scrollbar {
+  /*horizontal scroll bar size reduce*/
+  height: 0;
+}
